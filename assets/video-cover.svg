@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Абстрактная сцена для видео">
+  <rect width="1280" height="720" fill="#172326"/>
+  <path d="M0 540c160-80 308-120 476-52 150 61 265 78 406-14 148-97 262-96 398-26v272H0z" fill="#315d85"/>
+  <path d="M0 610c206-76 358-84 516-20 203 82 376 68 538-36 78-51 157-70 226-50v216H0z" fill="#9a3d37" opacity=".72"/>
+  <circle cx="910" cy="190" r="130" fill="#f0cf80"/>
+  <path d="M338 216v286l244-143z" fill="#fffdf8" opacity=".9"/>
+</svg>

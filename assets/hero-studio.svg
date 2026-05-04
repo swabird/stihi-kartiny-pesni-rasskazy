@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100" role="img" aria-label="Мастерская с листами, рамами и теплым светом">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#263f45"/>
+      <stop offset=".48" stop-color="#8e5547"/>
+      <stop offset="1" stop-color="#d3af71"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#161615"/>
+      <stop offset=".55" stop-color="#40352d"/>
+      <stop offset="1" stop-color="#a37d4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1800" height="1100" fill="url(#wall)"/>
+  <rect y="720" width="1800" height="380" fill="url(#floor)"/>
+  <circle cx="1380" cy="190" r="210" fill="#f7e5b3" opacity=".72"/>
+  <rect x="1020" y="250" width="390" height="510" rx="10" fill="#f2eadc" opacity=".88"/>
+  <rect x="1060" y="300" width="310" height="240" rx="8" fill="#234f58"/>
+  <path d="M1075 510c105-150 190-145 286 0v30h-286z" fill="#b55b47" opacity=".9"/>
+  <rect x="1450" y="330" width="210" height="340" rx="8" fill="#e9dfce" opacity=".92"/>
+  <path d="M1485 610c40-160 95-210 148-28 20-66 44-98 82-14v80h-230z" fill="#355d82"/>
+  <rect x="760" y="410" width="150" height="410" rx="6" fill="#302b29"/>
+  <rect x="787" y="438" width="96" height="310" fill="#ead9c0"/>
+  <path d="M160 735c290-80 520-50 790 5 270 56 530 26 690-20v380H160z" fill="#151515" opacity=".36"/>
+  <rect x="530" y="660" width="270" height="34" rx="17" fill="#e9c478"/>
+  <rect x="560" y="614" width="52" height="96" rx="10" fill="#f5eee2"/>
+  <rect x="630" y="594" width="52" height="116" rx="10" fill="#d85d46"/>
+  <rect x="700" y="628" width="52" height="82" rx="10" fill="#2d6a61"/>
+  <path d="M102 710h430l-78 214H168z" fill="#f1e8db"/>
+  <path d="M150 775h300M132 836h278M205 896h195" stroke="#8b7760" stroke-width="16" stroke-linecap="round" opacity=".55"/>
+  <path d="M800 830l690-80 18 130-680 96z" fill="#f8efe2" opacity=".85"/>
+  <path d="M875 888c110-90 210-80 300 24 72-86 162-104 260-15" fill="none" stroke="#2d6a61" stroke-width="24" stroke-linecap="round"/>
+</svg>
