@@ -1,15 +1,17 @@
 :root {
-  color-scheme: light;
-  --paper: #f2e1ef;
-  --soft: #d8d0cd;
-  --ash: #c9c0bd;
-  --ink: #080506;
-  --muted: #554a52;
-  --line: rgba(8, 5, 6, 0.16);
-  --plum: #4d2848;
-  --wine: #6e3357;
-  --rose: #ead4e8;
-  --white: #fff8ff;
+  color-scheme: dark;
+  --paper: #050807;
+  --soft: #0c1210;
+  --ash: #151f1c;
+  --ink: #f4fff8;
+  --muted: #99ada4;
+  --line: rgba(86, 255, 183, 0.18);
+  --plum: #11141c;
+  --wine: #56ffb7;
+  --rose: #13211b;
+  --white: #f4fff8;
+  --terminal: #56ffb7;
+  --terminal-dim: rgba(86, 255, 183, 0.14);
 }
 
 * {
@@ -22,11 +24,24 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(86, 255, 183, 0.1), transparent 28rem),
+    linear-gradient(180deg, #050807, #070608 42%, #050807);
   color: var(--ink);
   font-family:
     Georgia, "Times New Roman", Times, serif;
   line-height: 1.6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 5px;
+  opacity: 0.28;
 }
 
 a {
@@ -51,9 +66,11 @@ a {
 }
 
 .brand {
-  font-size: clamp(1.15rem, 3vw, 1.9rem);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
   letter-spacing: 0;
   text-decoration: none;
   opacity: 0.94;
@@ -71,7 +88,7 @@ a {
   gap: 0;
   overflow: hidden;
   border-radius: 50%;
-  background: rgba(255, 248, 255, 0.68);
+  background: rgba(244, 255, 248, 0.82);
   color: transparent;
   pointer-events: auto;
   transition:
@@ -87,8 +104,7 @@ a {
   padding: 0 10px;
   color: currentColor;
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.84rem;
   text-decoration: none;
 }
@@ -98,8 +114,8 @@ a {
   position: absolute;
   width: 24px;
   height: 16px;
-  border-top: 3px solid var(--ink);
-  border-bottom: 3px solid var(--ink);
+  border-top: 3px solid #050807;
+  border-bottom: 3px solid #050807;
   transform: translateX(-15px);
 }
 
@@ -107,7 +123,7 @@ a {
   content: "";
   position: absolute;
   width: 24px;
-  border-top: 3px solid var(--ink);
+  border-top: 3px solid #050807;
   transform: translateX(-15px);
 }
 
@@ -116,7 +132,7 @@ a {
   width: min(610px, calc(100vw - 36px));
   padding: 0 22px;
   border-radius: 999px;
-  color: var(--ink);
+  color: #050807;
 }
 
 .nav:hover::before,
@@ -127,7 +143,7 @@ a {
 }
 
 .nav a:hover {
-  color: var(--wine);
+  color: #05623e;
 }
 
 .corner-links {
@@ -198,8 +214,8 @@ a {
   align-items: center;
   padding: 120px clamp(18px, 5vw, 64px) 70px;
   background:
-    linear-gradient(90deg, rgba(48, 24, 48, 0.9), rgba(72, 34, 66, 0.5)),
-    linear-gradient(0deg, rgba(83, 45, 76, 0.62), rgba(83, 45, 76, 0.62)),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(5, 8, 7, 0.7)),
+    linear-gradient(0deg, rgba(15, 30, 24, 0.78), rgba(7, 6, 8, 0.82)),
     url("assets/photos/maxim-vyazovsky.jpeg") center 42% / cover;
   color: var(--white);
 }
@@ -207,7 +223,7 @@ a {
 .hero-copy {
   width: min(1040px, 100%);
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .eyebrow,
@@ -216,10 +232,12 @@ a {
   color: currentColor;
   font-size: 0.78rem;
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
   letter-spacing: 0;
   text-transform: none;
   opacity: 0.86;
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 h1,
@@ -238,10 +256,12 @@ h3 {
 
 h1 {
   margin: 40px auto 24px;
-  font-size: clamp(5.2rem, 18vw, 13rem);
+  font-size: clamp(5.2rem, 16vw, 12rem);
   font-weight: 700;
   letter-spacing: 0;
-  text-shadow: 0 20px 42px rgba(0, 0, 0, 0.18);
+  text-shadow:
+    0 0 18px rgba(86, 255, 183, 0.18),
+    0 22px 44px rgba(0, 0, 0, 0.44);
 }
 
 h2 {
@@ -249,6 +269,7 @@ h2 {
   font-size: clamp(3.2rem, 8vw, 7.8rem);
   font-weight: 400;
   text-align: center;
+  color: var(--white);
 }
 
 h3 {
@@ -259,15 +280,54 @@ h3 {
 
 .hero p {
   max-width: 720px;
-  margin-inline: auto;
+  margin-inline: 0;
   color: rgba(255, 253, 248, 0.86);
   font-size: clamp(1.25rem, 2.6vw, 2rem);
   font-style: italic;
 }
 
 .hero-note {
-  margin-top: 74px;
+  margin-top: 34px;
   font-size: clamp(1rem, 2vw, 1.35rem) !important;
+}
+
+.terminal-card {
+  width: min(560px, 100%);
+  margin-top: 34px;
+  border: 1px solid var(--line);
+  background: rgba(3, 7, 5, 0.78);
+  box-shadow:
+    inset 0 0 0 1px rgba(244, 255, 248, 0.04),
+    0 24px 70px rgba(0, 0, 0, 0.38);
+  color: var(--terminal);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.terminal-top {
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(86, 255, 183, 0.06);
+}
+
+.terminal-top span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--terminal);
+  opacity: 0.75;
+}
+
+.terminal-card pre {
+  margin: 0;
+  padding: 18px;
+  overflow-x: auto;
+  color: var(--terminal);
+  font-size: clamp(0.78rem, 1.4vw, 0.96rem);
+  line-height: 1.6;
+  white-space: pre-wrap;
 }
 
 .hero-actions {
@@ -300,8 +360,8 @@ h3 {
 }
 
 .intro {
-  background: var(--paper);
-  color: var(--ink);
+  background: #070b09;
+  color: var(--white);
   font-size: clamp(2rem, 5.2vw, 4rem);
   font-style: italic;
   line-height: 1.32;
@@ -325,7 +385,7 @@ h3 {
 }
 
 .muted {
-  background: var(--soft);
+  background: #0b100e;
 }
 
 .poem-list,
@@ -339,9 +399,9 @@ h3 {
 .story-grid article {
   min-height: 310px;
   padding: clamp(28px, 5vw, 52px);
-  border: 0;
+  border: 1px solid var(--line);
   border-radius: 0;
-  background: rgba(255, 248, 255, 0.58);
+  background: rgba(244, 255, 248, 0.045);
 }
 
 .wide-story {
@@ -397,7 +457,7 @@ figcaption {
 }
 
 figcaption strong {
-  color: var(--ink);
+  color: var(--white);
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.45rem;
   font-weight: 700;
@@ -405,7 +465,7 @@ figcaption strong {
 }
 
 figcaption em {
-  color: rgba(85, 74, 82, 0.82);
+  color: rgba(153, 173, 164, 0.82);
 }
 
 figcaption b {
@@ -413,8 +473,11 @@ figcaption b {
   margin-top: 3px;
   padding: 5px 10px;
   border-radius: 999px;
-  background: var(--ink);
-  color: var(--white);
+  border: 1px solid var(--line);
+  background: rgba(86, 255, 183, 0.12);
+  color: var(--terminal);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.86rem;
   letter-spacing: 0;
 }
@@ -445,7 +508,7 @@ figcaption b {
 }
 
 .split {
-  background: var(--ink);
+  background: #020403;
   color: var(--white);
 }
 
@@ -472,7 +535,7 @@ figcaption b {
   width: 100%;
   display: block;
   aspect-ratio: 16 / 9;
-  border: 0;
+  border: 1px solid var(--line);
   background: #000;
   object-fit: cover;
 }
@@ -493,7 +556,7 @@ figcaption b {
   gap: 16px;
   padding: 28px clamp(18px, 5vw, 64px);
   border-top: 1px solid rgba(255, 248, 255, 0.14);
-  background: var(--ink);
+  background: #020403;
   color: var(--white);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -514,7 +577,7 @@ figcaption b {
   align-content: center;
   padding: 128px clamp(18px, 5vw, 64px) 72px;
   background:
-    linear-gradient(90deg, rgba(48, 24, 48, 0.94), rgba(72, 34, 66, 0.5)),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.94), rgba(11, 28, 22, 0.64)),
     url("assets/photos/rocky-wave.jpeg") center / cover;
   color: var(--white);
   text-align: center;
