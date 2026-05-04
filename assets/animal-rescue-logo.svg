@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Logo">
+  <title>Logo</title>
+  <polygon points="942.0,512.0 727.0,884.4 297.0,884.4 82.0,512.0 297.0,139.6 727.0,139.6" fill="#F7F6F1"/>
+  <g stroke="#F7F6F1" stroke-width="14" stroke-linejoin="round">
+    <polygon points="394.0,307.0 630.0,307.0 512.0,512.0" fill="#0B6B50"/>
+    <polygon points="747.0,540.0 630.0,744.0 512.0,512.0" fill="#D9342B"/>
+    <polygon points="277.0,540.0 394.0,744.0 512.0,512.0" fill="#07579B"/>
+  </g>
+</svg>
