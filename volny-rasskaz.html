@@ -9,8 +9,10 @@
       content="Отдельная страница для вольного рассказа Максима Вязовского."
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="matrix.js" defer></script>
   </head>
   <body class="story-page">
+    <canvas class="matrix-rain" aria-hidden="true"></canvas>
     <header class="site-header">
       <a class="brand" href="index.html#top">Максим Вязовский</a>
       <nav class="nav" aria-label="Главная навигация">
@@ -91,7 +93,7 @@
     <main>
       <article class="story-hero">
         <p class="eyebrow">вольная проза</p>
-        <h1>Вольный рассказ</h1>
+        <h1 class="glitch" data-text="Вольный рассказ">Вольный рассказ</h1>
         <p>
           Эта страница оставлена как чистое поле: сюда можно положить текст,
           который не хочет быть ни стихотворением, ни заметкой, ни отчетом.

@@ -9,8 +9,10 @@
       content="Личный сайт Максима Вязовского: стихи, картины, песни, видео, рассказы и немного жизни."
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="matrix.js" defer></script>
   </head>
   <body>
+    <canvas class="matrix-rain" aria-hidden="true"></canvas>
     <header class="site-header">
       <a class="brand" href="#top">Максим Вязовский</a>
       <nav class="nav" aria-label="Главная навигация">
@@ -92,7 +94,7 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Максим Вязовский</p>
-          <h1>Хакер</h1>
+          <h1 class="glitch" data-text="Хакер">Хакер</h1>
           <p>Стихи, картины, песни, видео, рассказы и немного жизни.</p>
           <p class="hero-note">Место для того, что хочется сохранить живым...</p>
           <div class="terminal-card" aria-label="Профиль в терминальном стиле">
