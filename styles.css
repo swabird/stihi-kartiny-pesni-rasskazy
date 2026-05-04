@@ -149,7 +149,7 @@ a {
 .corner-links {
   position: fixed;
   right: 24px;
-  bottom: 24px;
+  bottom: 92px;
   z-index: 12;
   display: flex;
   flex-wrap: wrap;
@@ -241,6 +241,55 @@ a {
   border-color: rgba(86, 255, 183, 0.72);
   background: rgba(86, 255, 183, 0.14);
   color: var(--white);
+}
+
+.bottom-dock {
+  position: fixed;
+  right: 24px;
+  bottom: 18px;
+  left: 24px;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.bottom-dock a {
+  min-width: 118px;
+  min-height: 48px;
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  background: rgba(3, 7, 5, 0.82);
+  color: var(--terminal);
+  box-shadow:
+    inset 0 0 0 1px rgba(244, 255, 248, 0.04),
+    0 18px 40px rgba(0, 0, 0, 0.24);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  text-decoration: none;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+
+.bottom-dock a:hover {
+  border-color: rgba(86, 255, 183, 0.72);
+  background: rgba(86, 255, 183, 0.14);
+  color: var(--white);
+}
+
+.bottom-dock span {
+  color: rgba(86, 255, 183, 0.55);
+  font-size: 0.72rem;
+}
+
+.bottom-dock strong {
+  font-size: 0.8rem;
+  letter-spacing: 0;
 }
 
 .hero {
@@ -655,7 +704,7 @@ figcaption b {
 
   .corner-links {
     right: 14px;
-    bottom: 14px;
+    bottom: 78px;
     max-width: calc(100vw - 28px);
   }
 
@@ -683,6 +732,31 @@ figcaption b {
     width: 38px;
     height: 38px;
     font-size: 0.62rem;
+  }
+
+  .bottom-dock {
+    right: 14px;
+    bottom: 12px;
+    left: 14px;
+    justify-content: flex-start;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .bottom-dock a {
+    min-width: 92px;
+    min-height: 42px;
+    gap: 7px;
+    padding: 7px 10px;
+  }
+
+  .bottom-dock span {
+    font-size: 0.62rem;
+  }
+
+  .bottom-dock strong {
+    font-size: 0.66rem;
   }
 
   .hero {
