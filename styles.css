@@ -413,6 +413,15 @@ figcaption {
   font-size: clamp(2.6rem, 6vw, 5rem);
 }
 
+.site-video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+  object-fit: cover;
+}
+
 .life-text {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
