@@ -208,6 +208,41 @@ a {
   background: #0b6b50;
 }
 
+.social-rail {
+  position: fixed;
+  left: 24px;
+  top: 50%;
+  z-index: 12;
+  display: grid;
+  gap: 10px;
+  transform: translateY(-50%);
+}
+
+.social-rail a {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(3, 7, 5, 0.78);
+  color: var(--terminal);
+  box-shadow:
+    inset 0 0 0 1px rgba(244, 255, 248, 0.04),
+    0 18px 40px rgba(0, 0, 0, 0.24);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.social-rail a:hover {
+  border-color: rgba(86, 255, 183, 0.72);
+  background: rgba(86, 255, 183, 0.14);
+  color: var(--white);
+}
+
 .hero {
   min-height: 100vh;
   display: grid;
@@ -634,6 +669,20 @@ figcaption b {
   .corner-icon {
     width: 30px;
     height: 30px;
+  }
+
+  .social-rail {
+    left: 14px;
+    top: 92px;
+    bottom: auto;
+    grid-auto-flow: row;
+    transform: none;
+  }
+
+  .social-rail a {
+    width: 38px;
+    height: 38px;
+    font-size: 0.62rem;
   }
 
   .hero {
