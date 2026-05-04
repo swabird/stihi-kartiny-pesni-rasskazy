@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Стихи, картины, песни и рассказы</title>
+    <title>Максим Вязовский — хакер, стихи, картины и рассказы</title>
     <meta
       name="description"
-      content="Личный сайт со стихами, картинами, песнями, видео, рассказами и заметками о жизни."
+      content="Личный сайт Максима Вязовского: стихи, картины, песни, видео, рассказы и немного жизни."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top">Личный архив</a>
+      <a class="brand" href="#top">Максим Вязовский</a>
       <nav class="nav" aria-label="Главная навигация">
         <a href="#poems">Стихи</a>
         <a href="#art">Картины</a>
         <a href="#music">Песни</a>
-        <a href="#stories">Рассказы</a>
+        <a href="volny-rasskaz.html">Рассказ</a>
         <a href="#life">Жизнь</a>
       </nav>
     </header>
@@ -25,13 +25,10 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">стихи / картины / песни / рассказы</p>
-          <h1>Место для того, что хочется сохранить живым</h1>
-          <p>
-            Здесь можно собрать тексты, живопись, видео, песни и небольшие
-            фрагменты биографии так, чтобы они звучали вместе, но каждый имел
-            собственное пространство.
-          </p>
+          <p class="eyebrow">Максим Вязовский</p>
+          <h1>Хакер</h1>
+          <p>Стихи, картины, песни, видео, рассказы и немного жизни.</p>
+          <p class="hero-note">Место для того, что хочется сохранить живым...</p>
           <div class="hero-actions">
             <a class="button primary" href="#poems">Открыть архив</a>
             <a class="button" href="#contact">Связаться</a>
@@ -41,9 +38,9 @@
 
       <section class="intro" aria-label="Краткое описание сайта">
         <p>
-          Это первая версия сайта. Она уже готова принимать настоящие работы:
-          стихотворения, фотографии картин, ссылки на видео, рассказы и личные
-          заметки.
+          Добро пожаловать в мой личный архив. Здесь будут жить тексты,
+          живопись, песни, видеозаписи и истории: немного кода, немного света,
+          немного странной честности на полях обычной жизни.
         </p>
       </section>
 
@@ -81,16 +78,36 @@
         </div>
         <div class="gallery">
           <figure>
-            <div class="art-placeholder teal"></div>
-            <figcaption>Название картины, техника, год</figcaption>
+            <img src="assets/photos/sunset-sea.jpeg" alt="Картина с морем и закатом" />
+            <figcaption>Море и закат</figcaption>
           </figure>
           <figure>
-            <div class="art-placeholder rose"></div>
-            <figcaption>Название картины, техника, год</figcaption>
+            <img src="assets/photos/waterfall.jpeg" alt="Картина с водопадом" />
+            <figcaption>Водопад</figcaption>
           </figure>
           <figure>
-            <div class="art-placeholder ink"></div>
-            <figcaption>Название картины, техника, год</figcaption>
+            <img src="assets/photos/umbrella-woman.jpeg" alt="Картина с женщиной и зонтом" />
+            <figcaption>Женщина с зонтом</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/sea-mountain.jpeg" alt="Картина с морем и горой" />
+            <figcaption>Море и гора</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/butterflies.jpeg" alt="Картина с цветами и бабочками" />
+            <figcaption>Бабочки</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/rocky-wave.jpeg" alt="Картина с волной и скалами" />
+            <figcaption>Волна</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/blue-meditation.jpeg" alt="Картина с сидящей синей фигурой" />
+            <figcaption>Синяя медитация</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/cups.jpeg" alt="Картина с тремя кружками" />
+            <figcaption>Три кружки</figcaption>
           </figure>
         </div>
       </section>
@@ -121,20 +138,14 @@
           <h2>Рассказы</h2>
         </div>
         <div class="story-grid">
-          <article>
-            <h3>Название рассказа</h3>
+          <article class="wide-story">
+            <h3>Вольный рассказ</h3>
             <p>
-              Небольшой фрагмент, аннотация или первая фраза рассказа. Полный
-              текст можно хранить в папке content/stories.
+              Отдельная страница для текста без рамок жанра: наблюдения,
+              воспоминания, внутренний монолог или история, которая еще сама не
+              решила, чем она станет.
             </p>
-            <a href="content/stories/example.md">Читать</a>
-          </article>
-          <article>
-            <h3>Еще один рассказ</h3>
-            <p>
-              Блоки легко копировать и менять, когда появятся новые тексты.
-            </p>
-            <a href="content/stories/example.md">Читать</a>
+            <a href="volny-rasskaz.html">Открыть страницу</a>
           </article>
         </div>
       </section>
@@ -146,20 +157,21 @@
         </div>
         <div class="life-text">
           <p>
-            Здесь может быть короткий рассказ о тебе: города, периоды, люди,
-            события и внутренние повороты, которые связаны с творчеством.
+            Максим Вязовский. Хакер по внутренней оптике: смотреть на систему,
+            видеть скрытые связи, чинить то, что не обязано было ломаться, и
+            иногда превращать это в текст.
           </p>
           <p>
-            Лучше писать не как официальную биографию, а как честную карту:
-            где ты был, что искал, что стало важным.
+            На этом сайте рядом стоят картины, стихи, песни, видео и рассказы:
+            не резюме, а карта того, что удалось заметить, прожить и собрать.
           </p>
         </div>
       </section>
     </main>
 
     <footer class="footer" id="contact">
-      <p>© 2026. Личный сайт.</p>
-      <a href="mailto:hello@example.com">hello@example.com</a>
+      <p>© 2026 Максим Вязовский.</p>
+      <a href="volny-rasskaz.html">Вольный рассказ</a>
     </footer>
   </body>
 </html>
