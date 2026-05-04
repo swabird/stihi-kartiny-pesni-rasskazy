@@ -130,11 +130,18 @@ a {
   color: var(--wine);
 }
 
-.donation-corner {
+.corner-links {
   position: fixed;
   right: 24px;
   bottom: 24px;
   z-index: 12;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.corner-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -155,11 +162,30 @@ a {
   text-transform: uppercase;
 }
 
-.donation-corner img {
+.corner-link img,
+.corner-icon {
   width: 34px;
   height: 34px;
   flex: 0 0 auto;
   border-radius: 50%;
+}
+
+.corner-icon {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 248, 255, 0.75);
+  background: rgba(255, 248, 255, 0.1);
+  color: #fff8dc;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.cyber-link {
+  background: rgba(38, 31, 74, 0.9);
+}
+
+.cyber-link:hover {
+  background: #40348c;
 }
 
 .donation-corner:hover {
@@ -529,15 +555,20 @@ figcaption b {
     display: none;
   }
 
-  .donation-corner {
+  .corner-links {
     right: 14px;
     bottom: 14px;
+    max-width: calc(100vw - 28px);
+  }
+
+  .corner-link {
     min-height: 44px;
     padding-right: 10px;
     font-size: 0.68rem;
   }
 
-  .donation-corner img {
+  .corner-link img,
+  .corner-icon {
     width: 30px;
     height: 30px;
   }
