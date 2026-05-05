@@ -259,6 +259,21 @@ a {
   text-decoration: none;
 }
 
+.social-rail img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(84%)
+    sepia(57%)
+    saturate(976%)
+    hue-rotate(85deg)
+    brightness(104%)
+    contrast(104%);
+}
+
 .social-rail a:hover,
 .social-rail span:hover {
   border-color: rgba(86, 255, 183, 0.72);
