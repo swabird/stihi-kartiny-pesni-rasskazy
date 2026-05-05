@@ -861,6 +861,126 @@ figcaption b {
   grid-column: 1 / -1;
 }
 
+.writeup-section {
+  width: min(1120px, 100%);
+  margin: clamp(64px, 10vw, 120px) auto 0;
+}
+
+.writeup-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.writeup-card {
+  min-height: 300px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(86, 255, 183, 0.12), rgba(3, 7, 5, 0.74)),
+    rgba(3, 7, 5, 0.7);
+}
+
+.writeup-card h3 {
+  font-size: clamp(2.5rem, 6vw, 5.4rem);
+  line-height: 0.95;
+}
+
+.writeup-card p,
+.writeup-article p,
+.writeup-article li {
+  color: var(--muted);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.writeup-card a,
+.writeup-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  margin-top: 14px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  background: rgba(86, 255, 183, 0.1);
+  color: var(--terminal);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.writeup-card a:hover,
+.writeup-back:hover {
+  background: rgba(86, 255, 183, 0.18);
+}
+
+.writeup-main {
+  position: relative;
+  z-index: 2;
+  padding: 170px clamp(18px, 5vw, 64px) 90px;
+}
+
+.writeup-article {
+  width: min(940px, 100%);
+  margin-inline: auto;
+}
+
+.writeup-article h1 {
+  margin: 22px 0 26px;
+  font-size: clamp(4.2rem, 12vw, 9rem);
+}
+
+.writeup-lead {
+  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+  line-height: 1.45;
+}
+
+.writeup-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0 clamp(44px, 8vw, 76px);
+}
+
+.writeup-meta span {
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  background: rgba(86, 255, 183, 0.08);
+  color: var(--terminal);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.78rem;
+}
+
+.writeup-article section {
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+}
+
+.writeup-article h2 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  text-align: left;
+}
+
+.writeup-article pre {
+  overflow-x: auto;
+  margin: 22px 0 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: rgba(3, 7, 5, 0.84);
+  color: var(--terminal);
+}
+
+.writeup-article code {
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
 @media (max-width: 760px) {
   .site-header {
     padding: 16px;
@@ -939,11 +1059,16 @@ figcaption b {
   .video-panel,
   .story-grid,
   .life-text,
-  .terminal-grid {
+  .terminal-grid,
+  .writeup-list {
     grid-template-columns: 1fr;
   }
 
   .terminal-main {
+    padding-top: 150px;
+  }
+
+  .writeup-main {
     padding-top: 150px;
   }
 
