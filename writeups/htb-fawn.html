@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTB Fawn — Максим Вязовский</title>
+    <meta
+      name="description"
+      content="Авторский разбор учебной машины Hack The Box Fawn без публикации флага."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../matrix.js" defer></script>
+  </head>
+  <body class="terminal-page writeup-page">
+    <canvas class="matrix-rain" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top">Максим Вязовский</a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="../index.html#poems">Стихи</a>
+        <a href="../index.html#art">Картины</a>
+        <a href="../index.html#music">Песни</a>
+        <a href="../volny-rasskaz.html">Рассказ</a>
+        <a href="../index.html#life">Жизнь</a>
+      </nav>
+    </header>
+    <nav class="social-rail" aria-label="Профили Максима">
+      <a href="https://tryhackme.com/p/swabird" target="_blank" rel="noopener">THM</a>
+      <a href="https://profile.hackthebox.com/profile/019d1ac4-aeeb-70f4-bd2c-98cd68e0b892" target="_blank" rel="noopener">HTB</a>
+      <a href="https://t.me/swab1rd" target="_blank" rel="noopener"><img src="../assets/icons/telegram.svg" alt="" /></a>
+      <a href="https://github.com/swabird" target="_blank" rel="noopener" aria-label="GitHub профиль swabird"><img src="../assets/icons/github.svg" alt="" /></a>
+      <a href="https://www.instagram.com/swab1rd" target="_blank" rel="noopener" aria-label="Instagram swab1rd"><img src="../assets/icons/instagram.svg" alt="" /></a>
+    </nav>
+    <nav class="bottom-dock" aria-label="Быстрые страницы">
+      <a href="../signal.html"><span>01</span><strong>signal</strong></a>
+      <a class="active" href="../lab.html"><span>02</span><strong>lab</strong></a>
+      <a href="../proof.html"><span>03</span><strong>proof</strong></a>
+      <a href="../contact.html"><span>04</span><strong>contact</strong></a>
+    </nav>
+
+    <main class="writeup-main">
+      <article class="writeup-article">
+        <p class="eyebrow">hack the box / starting point</p>
+        <h1 class="glitch" data-text="Fawn">Fawn</h1>
+        <p class="writeup-lead">
+          Fawn — короткая машина про FTP и анонимный доступ. Она не пытается
+          быть сложной: ее задача в том, чтобы закрепить привычку сначала
+          смотреть на конфигурацию сервиса, а уже потом думать об эксплойтах.
+        </p>
+
+        <div class="writeup-meta">
+          <span>Платформа: Hack The Box</span>
+          <span>Уровень: стартовый</span>
+          <span>Флаги: не публикуются</span>
+        </div>
+
+        <section>
+          <h2>1. Разведка</h2>
+          <p>
+            Стартовый скан показывает FTP как главный открытый сервис. На этом
+            этапе важно не пропустить версию и баннер: иногда они сразу
+            подсказывают, куда смотреть дальше.
+          </p>
+          <pre><code>nmap -sV -sC &lt;target-ip&gt;</code></pre>
+        </section>
+
+        <section>
+          <h2>2. Анонимный вход</h2>
+          <p>
+            Следующий шаг — проверить, разрешен ли anonymous-login. В учебной
+            машине это приводит к доступу без пароля и показывает типичную
+            ошибку: сервис оставили открытым не потому, что его взломали, а
+            потому что его не закрыли.
+          </p>
+          <pre><code>ftp &lt;target-ip&gt;</code></pre>
+        </section>
+
+        <section>
+          <h2>3. Чтение файлов</h2>
+          <p>
+            После входа остается аккуратно перечислить каталог и забрать нужный
+            файл. В реальной среде такой доступ может раскрыть конфиги, бэкапы,
+            ключи или внутренние документы.
+          </p>
+        </section>
+
+        <section>
+          <h2>Вывод</h2>
+          <p>
+            Fawn напоминает: слабая конфигурация иногда опаснее уязвимости.
+            FTP должен быть ограничен, анонимный доступ выключен, а файлы не
+            должны лежать в публичной зоне без необходимости.
+          </p>
+        </section>
+
+        <a class="writeup-back" href="../lab.html">Назад в Lab</a>
+      </article>
+    </main>
+  </body>
+</html>
