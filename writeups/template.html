@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Write-up Template — Максим Вязовский</title>
+    <meta
+      name="description"
+      content="Шаблон страницы для будущих write-up статей Максима Вязовского."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../matrix.js" defer></script>
+  </head>
+  <body class="terminal-page writeup-page">
+    <canvas class="matrix-rain" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <a class="brand" href="../index.html#top">Максим Вязовский</a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="../index.html#poems">Стихи</a>
+        <a href="../index.html#art">Картины</a>
+        <a href="../index.html#music">Песни</a>
+        <a href="../volny-rasskaz.html">Рассказ</a>
+        <a href="../index.html#life">Жизнь</a>
+      </nav>
+    </header>
+    <nav class="social-rail" aria-label="Профили Максима">
+      <a href="https://tryhackme.com/p/swabird" target="_blank" rel="noopener">THM</a>
+      <a href="https://profile.hackthebox.com/profile/019d1ac4-aeeb-70f4-bd2c-98cd68e0b892" target="_blank" rel="noopener">HTB</a>
+      <a href="https://t.me/swab1rd" target="_blank" rel="noopener"><img src="../assets/icons/telegram.svg" alt="" /></a>
+      <a href="https://github.com/swabird" target="_blank" rel="noopener" aria-label="GitHub профиль swabird"><img src="../assets/icons/github.svg" alt="" /></a>
+      <a href="https://www.instagram.com/swab1rd" target="_blank" rel="noopener" aria-label="Instagram swab1rd"><img src="../assets/icons/instagram.svg" alt="" /></a>
+    </nav>
+    <nav class="bottom-dock" aria-label="Быстрые страницы">
+      <a href="../signal.html"><span>01</span><strong>signal</strong></a>
+      <a class="active" href="../lab.html"><span>02</span><strong>lab</strong></a>
+      <a href="../proof.html"><span>03</span><strong>proof</strong></a>
+      <a href="../contact.html"><span>04</span><strong>contact</strong></a>
+    </nav>
+
+    <main class="writeup-main">
+      <article class="writeup-article">
+        <p class="eyebrow">platform / difficulty</p>
+        <h1 class="glitch" data-text="Machine Name">Machine Name</h1>
+        <p class="writeup-lead">
+          Короткий лид: что за машина, чем она интересна, какие навыки
+          тренирует. Например: веб-разведка, SMB, Docker, Active Directory,
+          privilege escalation или chaining нескольких уязвимостей.
+        </p>
+
+        <div class="writeup-meta">
+          <span>Платформа: Hack The Box</span>
+          <span>Уровень: Easy / Medium</span>
+          <span>Флаги: не публикуются</span>
+          <span>Статус: черновик</span>
+        </div>
+
+        <section>
+          <h2>1. Разведка</h2>
+          <p>
+            Что нашли на первом этапе: порты, сервисы, версии, домены,
+            сабдомены, редиректы, интересные заголовки или баннеры.
+          </p>
+          <pre><code>nmap -sV -sC &lt;target-ip&gt;</code></pre>
+        </section>
+
+        <section>
+          <h2>2. Точка входа</h2>
+          <p>
+            Какой сервис стал входом и почему. Здесь хорошо объяснять не только
+            команду, но и мыслительный ход: почему проверялась именно эта
+            гипотеза.
+          </p>
+        </section>
+
+        <section>
+          <h2>3. Foothold</h2>
+          <p>
+            Как получен первый доступ. Не публикуй флаги, реальные пароли,
+            приватные токены и чужие секреты. Для чувствительных значений
+            используй плейсхолдеры вроде &lt;REDACTED&gt;.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. Privilege Escalation</h2>
+          <p>
+            Как шел переход к более высоким правам: sudo, SUID, cron, Docker,
+            PATH hijacking, writable files, reused credentials, AD abuse или
+            другая техника.
+          </p>
+        </section>
+
+        <section>
+          <h2>Выводы</h2>
+          <p>
+            3-5 практических уроков: что проверять в реальных аудитах, какие
+            настройки опасны, как это чинить и какой навык машина тренирует.
+          </p>
+        </section>
+
+        <a class="writeup-back" href="../lab.html">Назад в Lab</a>
+      </article>
+    </main>
+  </body>
+</html>
