@@ -239,8 +239,7 @@ a {
   transform: translateY(-50%);
 }
 
-.social-rail a,
-.social-rail span {
+.social-rail a {
   width: 48px;
   height: 48px;
   display: grid;
@@ -274,16 +273,10 @@ a {
     contrast(104%);
 }
 
-.social-rail a:hover,
-.social-rail span:hover {
+.social-rail a:hover {
   border-color: rgba(86, 255, 183, 0.72);
   background: rgba(86, 255, 183, 0.14);
   color: var(--white);
-}
-
-.social-placeholder {
-  cursor: default;
-  opacity: 0.72;
 }
 
 .bottom-dock {
@@ -1222,8 +1215,7 @@ figcaption b {
     transform: none;
   }
 
-  .social-rail a,
-  .social-rail span {
+  .social-rail a {
     width: 38px;
     height: 38px;
     font-size: 0.62rem;
